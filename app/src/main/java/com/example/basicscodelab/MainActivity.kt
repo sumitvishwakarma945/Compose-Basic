@@ -117,7 +117,7 @@ fun Greeting(name: String) {
 
 @Composable
 fun CardContent(name: String) {
-    var expanded by remember {
+    var expanded by rememberSaveable {
         mutableStateOf(false)
     }
     val extraPadding by animateDpAsState(
